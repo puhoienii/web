@@ -1,0 +1,252 @@
+/* Resetare și stilizare globală */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('images/background/font1.jpg'); /* Imagine fundal general */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    background-attachment: fixed; /* Efect de parallax */
+}
+
+header {
+    position: relative; /* Necesitat pentru a poziționa pseudo-elementul */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header::before {
+    content: ""; /* Fără text, doar pentru a afișa imaginea */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background/font1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Opacitate 0.5 pentru imagine */
+    z-index: -1; /* Asigură că imaginea este în spatele textului */
+}
+
+header .logo img {
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #F1D500;
+    border-bottom: 2px solid #F1D500;
+}
+
+/* Stiluri pentru secțiuni */
+.section {
+    padding: 50px 20px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundal cu opacitate */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* background-image: url('images/background/motive-folclorice.jpg'); /* Folclor discret */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+
+h1, h2 {
+    font-family: 'Merienda', cursive;
+    color: #AAF;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+video {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Player audio pentru muzica folclorică */
+audio {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #3e3e3e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Logo care se mișcă odată cu scroll-ul */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 80px; /* Ajustează dimensiunea logotipului */
+    width: auto;
+}
+
+/* Galerie foto */
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery a {
+    display: block;
+    max-width: 200px; /* Dimensiunea imaginii mici */
+    width: 100%;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Mărirea imaginii când treci cu mouse-ul peste ea */
+}
+
+/* Stil pentru lightbox */
+.lightbox {
+    position: relative;
+    display: block;
+}
+
+.lightbox img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Galerie foto */
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 200px; /* Dimensiunea imaginii mici */
+}
+
+.gallery a {
+    display: block;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Mărirea imaginii când treci cu mouse-ul peste ea */
+}
+
+/* Descrierea care apare la hover */
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundal semitransparent */
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    width: calc(100% - 20px); /* Lăsăm un mic spațiu pe margini */
+}
+
+/* Când utilizatorul face hover pe item-ul din galerie, descrierea devine vizibilă */
+.gallery-item:hover .description {
+    opacity: 1; /* Schimbă opacitatea la 1 pentru a face descrierea vizibilă */
+}
+
