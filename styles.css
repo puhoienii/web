@@ -253,14 +253,14 @@ footer {
 /* Galerie Video */
 .video-gallery {
     display: flex;
-    flex-wrap: wrap; /* Permite ca videoclipurile să se pună pe mai multe rânduri */
-    justify-content: center; /* Centrează elementele */
-    gap: 20px; /* Adaugă un spațiu între videoclipuri */
+    flex-wrap: wrap; /* Permite aranjarea elementelor pe mai multe rânduri */
+    justify-content: center; /* Centrează elementele pe orizontală */
+    gap: 20px; /* Adaugă un spațiu între elemente */
 }
 
 /* Stiluri pentru fiecare element video */
 .video-item {
-    width: 100%; /* Pe dispozitive mici, videoclipurile vor ocupa toată lățimea */
+    width: 100%; /* Videoclipurile vor ocupa întreaga lățime a containerului său */
     max-width: 320px; /* Limitează lățimea maximă a fiecărui videoclip */
     margin-bottom: 20px; /* Adaugă un spațiu între rânduri */
 }
@@ -276,7 +276,17 @@ footer {
 /* Asigură-te că videoclipurile se redimensionează corect pe ecrane mici */
 @media (max-width: 768px) {
     .video-item {
-        max-width: 100%; /* Pe ecrane mici, videoclipurile vor ocupa toată lățimea */
+        width: 100%; /* Pe ecrane mici, videoclipurile vor ocupa întreaga lățime disponibilă */
+    }
+
+    .video-gallery {
+        justify-content: space-evenly; /* Așează videoclipurile pe mai multe rânduri și le aliniaza */
     }
 }
 
+/* Dacă vrei să le împărți în 2 coloane pe tablete */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .video-item {
+        width: 48%; /* Pe tablete, va împărți ecranul în 2 coloane */
+    }
+}
