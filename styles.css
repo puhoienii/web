@@ -250,3 +250,33 @@ footer {
     opacity: 1; /* Schimbă opacitatea la 1 pentru a face descrierea vizibilă */
 }
 
+/* Galerie Video */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite ca videoclipurile să se pună pe mai multe rânduri */
+    justify-content: center; /* Centrează elementele */
+    gap: 20px; /* Adaugă un spațiu între videoclipuri */
+}
+
+/* Stiluri pentru fiecare element video */
+.video-item {
+    width: 100%; /* Pe dispozitive mici, videoclipurile vor ocupa toată lățimea */
+    max-width: 320px; /* Limitează lățimea maximă a fiecărui videoclip */
+    margin-bottom: 20px; /* Adaugă un spațiu între rânduri */
+}
+
+/* Stiluri pentru video */
+.video-item video {
+    width: 100%; /* Videoclipul va ocupa întreaga lățime a containerului său */
+    height: auto; /* Permite ajustarea proporțională a înălțimii */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră subtilă */
+}
+
+/* Asigură-te că videoclipurile se redimensionează corect pe ecrane mici */
+@media (max-width: 768px) {
+    .video-item {
+        max-width: 100%; /* Pe ecrane mici, videoclipurile vor ocupa toată lățimea */
+    }
+}
+
