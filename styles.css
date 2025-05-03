@@ -290,3 +290,9 @@ footer {
         width: 48%; /* Pe tablete, va împărți ecranul în 2 coloane */
     }
 }
+
+
+.containerAllPhotos {
+    width: 100%;
+    text-align: right; /* Centrează orice element text în interiorul containerului */
+}
