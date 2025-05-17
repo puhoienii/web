@@ -1,4 +1,5 @@
 const videos = [
+'http://res.cloudinary.com/dbfmmlnkk/video/upload/v1747482609/era_seara_linistita_obd1xm.mp4',
 'http://res.cloudinary.com/dbfmmlnkk/video/upload/v1747474392/Puhoienii_Ureaza_la_TeleMagazin_vsbazq.mp4',
 'http://res.cloudinary.com/dbfmmlnkk/video/upload/v1747474388/0-02-05-Mindracind-sa-maritat_vwyt54.mp4',
 'http://res.cloudinary.com/dbfmmlnkk/video/upload/v1747474372/CalatoruleDinDrum_doipvr.mp4',
