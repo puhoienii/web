@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUHOIENII Galerie Video</title>
+    <style>
+                /* Stiluri pentru imaginea de fundal cu opacitate */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            position: relative;
+        }
+
+        /* Imaginea de fundal cu opacitate 0.5 */
+         #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background/font2.jpeg'); /* Calea corectă a imaginii tale */
+            background-repeat: repeat;  /* Imaginea se va repeta pe întreaga suprafață */
+            background-position: center;
+            opacity: 0.3; /* Opacitate 50% */
+            z-index: -1; /* Asigură-te că imaginea este în spatele altor elemente */
+        }
+
+        /* Stiluri pentru titlu */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .video-container {
+            /*background-color: #fff;*/
+
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .video-title {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- Imaginea de fundal -->
+<div id="background"></div>
+
+<h1>PUHOIENII Galerie Video</h1>
+
+<a href="index.html" alt="La pagina principala.">Inapoi</a>
+<div class="gallery" id="videoGallery">
+</div>
+<a href="index.html" alt="La pagina principala.">Inapoi</a>
+
+<script src="videos.js"></script>
+<script>
+function displayVideos() {
+    const gallery = document.getElementById('videoGallery');
+    let videoId = 1;
+
+    videos.forEach(video => {
+        const videoContainer = document.createElement('div');
+        videoContainer.classList.add('video-container');
+
+        const videoElement = document.createElement('video');
+        videoElement.setAttribute('controls', 'true');
+        videoElement.src = video; // URL-ul fișierului video
+
+        const titleElement = document.createElement('div');
+        titleElement.classList.add('video-title');
+        titleElement.textContent = '"Puhoienii" - video ' + videoId++;
+
+        videoContainer.appendChild(videoElement);
+        videoContainer.appendChild(titleElement);
+        gallery.appendChild(videoContainer);
+    });
+}
+
+// Apelează funcția pentru a încărca videourile
+displayVideos();
+</script>
+
+</body>
+</html>
