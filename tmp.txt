@@ -8,10 +8,3 @@
 8.Guțan Victor-Vocalist.
 9.Dorojan Veaceslav-Conducator muzical.
 10.Catîrev Vasie Pantilei-Conducator Artistic.
-
-// cloudinary credentials
-    'Authorization': 'Basic ' + btoa('626119239371783:VQOMAOWiLCMghmx8lUctLv_9x9s')
-    // OR
-    const cloudName = 'dbfmmlnkk';
-    const apiKey = '626119239371783';
-    const apiSecret = 'VQOMAOWiLCMghmx8lUctLv_9x9s';
